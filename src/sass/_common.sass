@@ -380,3 +380,33 @@ body
 		li
 			float: left
 			margin-left: 20px
+#menu_toggle
+	display: none
+/*-------------------------------------------------*/
+/*----------- Mobile Landscape Main Page ----------*/
+/*-------------------------------------------------*/
+.mobile.landscape
+	.wrapper
+		width: 1024px
+		margin-left: auto
+		margin-right: auto
+	#menu_toggle
+		display: block
+		float: left
+		margin-top: 10px
+		margin-left: 40px
+		width: 60px
+		height: 60px
+		text-align: center
+		background-color: $orange
+		border-radius: 5px
+		vertical-align: middle
+		i
+			margin-right: 5px
+			display: inline-block
+			color: #fff
+			font-size: 38px
+			line-height: 38px
+		&.is-active
+			i:before
+				content: unquote("\"\\#{e807}\"")
