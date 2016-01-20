@@ -1,0 +1,382 @@
+// fonts
+$default-fonts: Arial, sans-serif
++font("Montserrat-Bold", Montserrat-Bold)
++font("Montserrat-Regular", Montserrat-Regular)
+$mon-b: "Montserrat-Bold", $default-fonts
+$mon-r: "Montserrat-Regular", $default-fonts
+
+// colors
+$grey-dark: #2D3047
+$orange: #FE5F00
+
+/*-------------------------------------------------------------------------*/
+/*----------------------------- MAIN STYLES -------------------------------*/
+/*-------------------------------------------------------------------------*/
+a:hover, a:focus
+	text-decoration: none
+a
+	color: inherit
+svg
+	width: 100%
+	height: 100%
+body
+	min-width: 320px
+	font-family: $mon-r
+	font-size: 14px
+	color: $grey-dark
+	line-height: 1.2
+.wrapper
+	min-height: 100%
+	padding-bottom: 85px
+.content
+	margin: 0 auto
+	width: 1152px
+.row
+	+pie-clearfix
+.header
+	height: 80px
+	a
+		text-decoration: none
+.main
+	padding-top: 20px
+.footer
+	margin-top: -85px
+	height: 85px
+	border-top: 1px solid #DAE9E9
+/* logo */
+.logo
+	float: left
+	margin-left: 42px
+	a
+		display: block
+		padding: 22px 0
+	img
+		width: 270px
+		height: 36px
+		vertical-align: middle
+/* navigation */
+.navigation
+	float: left
+	margin-top: 31px
+	margin-left: 125px
+	font-family: $mon-b
+	font-size: 15px
+	line-height: 19px
+	text-transform: uppercase
+	ul
+		+pie-clearfix
+		li
+			float: left
+			& + li
+				margin-left: 31px
+/* socials */
+.socials
+	float: right
+	margin-top: 28px
+	margin-right: 42px
+	font-size: 24px
+	color: $orange
+	line-height: 24px
+	+pie-clearfix
+	li
+		float: left
+		margin-left: 7px
+		a
+			display: block
+/* grid section */
+.grid-wrap
+	position: relative
+	overflow: hidden
+	a
+		text-decoration: none
+.grid
+	&__list
+		+pie-clearfix
+		li
+			position: relative
+			overflow: hidden
+			float: left
+			width: 20%
+			height: 180px
+	&__img
+		img
+			width: 100%
+			height: auto
+			vertical-align: middle
+	&__tooltip
+		position: absolute
+		top: 100%
+		left: 0
+		padding: 20px
+		width: 100%
+		height: 100%
+		font-family: $mon-b
+		font-size: 18px
+		color: #fff
+		line-height: 25px
+		background-color: rgba(45,48,71,.9)
+		z-index: 1
+		transition: all 0.6s
+	&__title
+		display: none
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(45,48,71,.9)
+		z-index: 99
+		opacity: 0
+		&-text
+			margin: 0 auto
+			position: relative
+			width: 50%
+			top: -40px
+			margin-top: -40px
+			text-align: center
+			font-size: 40px
+			line-height: 1.3
+			color: #fff
+	&__btn-more
+		position: absolute
+		width: auto
+		height: auto
+		bottom: 20px
+		right: 20px
+		padding: 3px 5px 3px 10px
+		font-size: 8px
+		color: #fff
+		line-height: 10px
+		text-transform: uppercase
+		background-color: $orange
+		border-radius: 5px
+@keyframes animatedBackground
+	from
+		background-position: 0 center
+	to
+		background-position: -100% center
+.wave
+	position: absolute
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 21px
+	background-image: url("../img/wave.png")
+	background-position: 0 center
+	background-repeat: repeat-x
+	z-index: 100
+	animation: animatedBackground 30s linear infinite
+/* hot-now section */
+.hot-now
+	margin-bottom: 40px
+	background-color: rgba(254, 95, 0, 0.08)
+	padding: 18px 42px 32px
+	font-size: 16px
+	line-height: 25px
+	border-radius: 5px
+	a
+		text-decoration: none
+	.section__title
+		margin-bottom: 20px
+		font-family: $mon-b
+		font-size: 20px
+		color: $orange
+		line-height: 24px
+		text-transform: uppercase
+	.row
+		margin-left: -40px
+	.el
+		display: inline-block
+		margin-left: 40px
+		margin-right: -4px
+		width: 237px
+		vertical-align: top
+		&__img
+			overflow: hidden
+			margin-bottom: 12px
+			height: 133px
+			img
+				width: 100%
+				height: auto
+				vertical-align: middle
+/* top-trend section */
+.top-trend
+	padding: 0 42px
+	font-size: 20px
+	line-height: 30px
+	a
+		text-decoration: none
+	.section__title
+		margin-bottom: 40px
+		font-family: $mon-b
+		font-size: 20px
+		line-height: 24px
+		text-transform: uppercase
+		&:after
+			content: ''
+			display: block
+			margin-top: 10px
+			height: 1px
+			background-color: #DAE9E9
+	.row
+		margin-left: -40px
+	.el
+		display: inline-block
+		margin-left: 40px
+		margin-right: -4px
+		margin-bottom: 40px
+		width: 514px
+		vertical-align: top
+		&__img
+			overflow: hidden
+			margin-bottom: 17px
+			height: 289px
+			img
+				width: 100%
+				height: auto
+				vertical-align: middle
+		&.el--small
+			margin-bottom: 20px
+			.el
+				margin-bottom: 20px
+				width: 237px
+				font-size: 15px
+				line-height: 25px
+				&__img
+					margin-bottom: 12px
+					height: 133px
+/* banner 100%x90px */
+.mgid-hr
+	margin-bottom: 40px
+	height: 90px
+	background-color: #F5F5F5 // for example
+/* pagination */
+.pagination
+	+pie-clearfix
+	a
+		text-decoration: none
+	&__button
+		float: left
+		padding-top: 8px
+		padding-left: 21px
+		padding-right: 21px
+		width: 160px
+		height: 60px
+		font-family: $mon-b
+		font-size: 32px
+		color: #fff
+		line-height: 39px
+		background-color: $grey-dark
+		border-radius: 5px
+		transition: all 0.2s
+		&:hover
+			background-color: $orange
+			transition: all 0.2s
+	&__prev
+		text-align: right
+	&__next
+		text-align: left
+	&__list
+		float: left
+		margin: 17px 30px 0
+		font-family: $mon-b
+		font-size: 20px
+		line-height: 24px
+		li
+			float: left
+			&.is-active
+				color: #fff
+				border-radius: 5px
+				background-color: $orange
+			a
+				display: block
+				padding: 0 5px 2px
+.icon-arrow_left
+	float: left
+	margin-top: 9px
+	+sr(arrow_left)
+.icon-arrow_right
+	float: right
+	margin-top: 9px
+	+sr(arrow_right)
++retina
+	.icon-arrow_left
+		+s(arrow_left)
+	.icon-arrow_right
+		+s(arrow_right)
+/* wrap-sm */
+.wrap-sm
+	padding: 0 42px
+/* Subscribe */
+.subscribe-wrap
+	margin-top: 40px
+	margin-bottom: 40px
+	> .row
+		padding-top: 40px
+		border-top: 1px solid #DAE9E9
+.subscribe
+	float: left
+	padding: 20px 38px 40px
+	width: 718px
+	background-color: rgba(254,95,0,.08)
+	border-radius: 5px
+	&__title
+		font-family: $mon-b
+		font-size: 40px
+		line-height: 50px
+		span
+			color: $orange
+	.socials
+		float: none
+		margin-top: 22px
+		margin-right: 0
+		color: #fff
+		li
+			margin-left: 0
+			margin-right: 10px
+			background-color: #49659F
+			border-radius: 5px
+			a
+				padding: 17px 17px 17px 15px
+			+ li
+				background-color: #55ACEE
+				+ li
+					background-color: #D1221E
+					+ li
+						background-color: #FF2D31
+						+ li
+							background-color: #227598
+/* Mgidiply social vk/fb */
+.mgidiply-soc
+	float: right
+	width: 300px
+	height: 214px
+	background-color: #F5F5F5 // for preview
+/* Footer */
+.footer
+	padding-top: 31px
+	font-size: 15px
+	line-height: 19px
+	a
+		text-decoration: none
+	&__logo
+		float: left
+		+pie-clearfix
+		p
+			float: left
+		&-link
+			float: left
+			margin-left: 20px
+			width: 96px
+			height: 19px
+			img
+				width: 100%
+				height: auto
+				vertical-align: -1px
+	&__nav
+		float: right
+		ul
+			+pie-clearfix
+		li
+			float: left
+			margin-left: 20px
