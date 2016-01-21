@@ -37,6 +37,7 @@ body
 .wrapper
 	min-height: 100%
 	padding-bottom: 85px
+	min-width: 1152px
 .content
 	margin: 0 auto
 	width: 1152px
@@ -45,6 +46,7 @@ body
 .header
 	position: relative
 	height: 80px
+	border-bottom: 1px solid #DAE9E9
 	z-index: 1000
 	a
 		text-decoration: none
@@ -52,6 +54,7 @@ body
 	padding-top: 20px
 .footer
 	margin-top: -85px
+	min-width: 1152px
 	height: 85px
 	border-top: 1px solid #DAE9E9
 /* logo */
@@ -78,8 +81,13 @@ body
 		+pie-clearfix
 		li
 			float: left
-			& + li
-				margin-left: 31px
+			a
+				padding: 4px 13px
+			&.is-active
+				a
+					background-color: $orange
+					border-radius: 5px
+					color: #fff
 /* socials */
 .socials
 	float: right
@@ -195,12 +203,14 @@ body
 		line-height: 24px
 		text-transform: uppercase
 	.row
-		margin-left: -40px
+		margin-left: -20px
+		margin-right: -20px
 	.el
 		display: inline-block
-		margin-left: 40px
-		margin-right: -4px
-		width: 237px
+		padding-left: 20px
+		padding-right: 20px
+		margin-right: -5px
+		width: 25%
 		vertical-align: top
 		&__img
 			overflow: hidden
@@ -230,13 +240,15 @@ body
 			height: 1px
 			background-color: #DAE9E9
 	.row
-		margin-left: -40px
+		margin-left: -20px
+		margin-right: -20px
 	.el
 		display: inline-block
-		margin-left: 40px
-		margin-right: -4px
+		padding-left: 20px
+		padding-right: 20px
+		margin-right: -5px
 		margin-bottom: 40px
-		width: 514px
+		width: 50%
 		vertical-align: top
 		&__img
 			overflow: hidden
@@ -250,7 +262,6 @@ body
 			margin-bottom: 20px
 			.el
 				margin-bottom: 20px
-				width: 237px
 				font-size: 15px
 				line-height: 25px
 				&__img
@@ -310,11 +321,6 @@ body
 	float: right
 	margin-top: 9px
 	+sr(arrow_right)
-+retina
-	.icon-arrow_left
-		+s(arrow_left)
-	.icon-arrow_right
-		+s(arrow_right)
 /* wrap-sm */
 .wrap-sm
 	padding: 0 42px
@@ -400,13 +406,14 @@ body
 .mobile.landscape
 	.content
 		width: 1024px
-	.wrap-sm
-		padding: 0 40px
 	.wrapper
 		width: 1024px
 		margin-left: auto
 		margin-right: auto
 		overflow: hidden
+		min-width: 1024px
+	.footer
+		min-width: 1024px
 	#menu_toggle
 		display: block
 		float: left
@@ -459,24 +466,24 @@ body
 		margin-left: 20px
 		margin-right: 20px
 		.row
-			margin-left: -42px
-			margin-right: -42px
+			margin-left: -32px
+			margin-right: -32px
 		.el
-			margin-left: 20px
-			width: 221px
+			padding-left: 10px
+			padding-right: 10px
 			&__img
 				height: 123px
 	.top-trend
 		.row
-			margin-left: -20px
+			margin-left: -10px
+			margin-right: -10px
 		.el
-			margin-left: 20px
-			width: 461px
+			padding-left: 10px
+			padding-right: 10px
 			&__img
 				height: 258px
 			&.el--small
 				.el
-					width: 221px
 					&__img
 						height: 124px
 	.subscribe
@@ -485,6 +492,10 @@ body
 /*----------- Mobile Portrait Main Page ----------*/
 /*------------------------------------------------*/
 .mobile.portrait
+	.wrapper
+		min-width: 768px
+	.footer
+		min-width: 768px
 	.content
 		width: 768px
 	.wrap-sm
@@ -548,28 +559,31 @@ body
 		margin-right: 20px
 		padding-bottom: 12px
 		.row
-			margin-left: -42px
-			margin-right: -42px
+			margin-left: -32px
+			margin-right: -32px
 		.el
 			margin-bottom: 20px
-			margin-left: 20px
-			width: 334px
+			padding-left: 10px
+			padding-right: 10px
+			width: 50%
 			&__img
 				height: 185px
 	.top-trend
 		.row
-			margin-left: -20px
+			margin-left: -10px
+			margin-right: -10px
 		.el
-			margin-left: 20px
+			padding-left: 10px
+			padding-right: 10px
 			margin-bottom: 80px
-			width: 688px
+			width: 100%
 			&__img
 				height: 385px
 			&.el--small
 				margin-bottom: 0
 				.el
 					margin-bottom: 40px
-					width: 334px
+					width: 50%
 					&__img
 						height: 187px
 	.pagination
@@ -578,4 +592,103 @@ body
 		width: 688px
 	.mgidiply-soc
 		display: none
-	
+/*-------------------------------------------------*/
+/*------------------ Category Page ----------------*/
+/*-------------------------------------------------*/
+.content
+	&__left
+		float: left
+		width: 812px
+	/* left content */
+	&__cat
+		margin-bottom: 40px
+		+pie-clearfix
+		.top-trend
+			.section__title
+				font-size: 42px
+				line-height: 52px
+				margin-bottom: 28px
+				text-transform: none
+				&:after
+					display: none
+			.el
+				width: 100%
+				&__img
+					height: 410px
+				&.el--small
+					.el
+						width: 50%
+						font-size: 20px
+						line-height: 30px
+						&__img
+							height: 193px
+	/* right aside */
+	.content__right
+		float: right
+		margin-right: 40px
+		width: 300px
+.aside-ban
+	margin-bottom: 35px
+	width: 300px
+	height: 600px
+	background-color: #F5F5F5
+.breadcrumbs
+	margin-bottom: 5px
+	margin-left: 42px
+	font-size: 13px
+	color: #6E7E85
+	line-height: 16px
+	a
+		text-decoration: none
+	li
+		display: inline-block
+		+ li
+			&:before
+				content: '/'
+				display: inline-block
+				margin-right: 5px
+.aside-top
+	margin-bottom: 20px
+	font-size: 15px
+	line-height: 20px
+	&__title
+		font-family: $mon-b
+		font-size: 20px
+		line-height: 24px
+	li
+		padding-top: 20px
+		padding-bottom: 20px
+		border-top: 1px solid #DAE9E9
+		+pie-clearfix
+		&:last-child
+			border-bottom: 1px solid #DAE9E9
+	&__img
+		float: left
+		margin-right: 10px
+		width: 100px
+		height: 56px
+		overflow: hidden
+		img
+			width: 100%
+			height: auto
+/*-------------------------------------------------*/
+/*--------- Mobile Landscape Category Page --------*/
+/*-------------------------------------------------*/
+.mobile.landscape
+	.content
+		&__left
+			width: 684px
+	.pagination
+		&__list
+			width: 220px
+			text-align: center
+			li
+				float: none
+				display: inline-block
+				margin-right: -2px
+/*-------------------------------------------------*/
+/*---------- Mobile Portrait Category Page --------*/
+/*-------------------------------------------------*/
+.mobile.portrait
+	.socials
+		margin-right: 0
