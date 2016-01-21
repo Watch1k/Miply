@@ -83,11 +83,13 @@ body
 			float: left
 			a
 				padding: 4px 13px
-			&.is-active
+				border-radius: 5px
+				transition: all 0.2s
+			&.is-active, &:hover
 				a
 					background-color: $orange
-					border-radius: 5px
 					color: #fff
+					transition: all 0.2s
 /* socials */
 .socials
 	float: right
@@ -102,6 +104,13 @@ body
 		margin-left: 7px
 		a
 			display: block
+.header
+	.socials
+		li
+			transition: all 0.3s
+			&:hover
+				color: $grey-dark
+				transition: all 0.3s
 /* grid section */
 .grid-wrap
 	position: relative
@@ -121,7 +130,7 @@ body
 		img
 			width: 100%
 			height: auto
-			vertical-align: middle
+			vertical-align: bottom
 	&__tooltip
 		position: absolute
 		top: 100%
@@ -219,7 +228,7 @@ body
 			img
 				width: 100%
 				height: auto
-				vertical-align: middle
+				vertical-align: bottom
 /* top-trend section */
 .top-trend
 	padding: 0 42px
@@ -257,7 +266,7 @@ body
 			img
 				width: 100%
 				height: auto
-				vertical-align: middle
+				vertical-align: bottom
 		&.el--small
 			margin-bottom: 20px
 			.el
@@ -343,6 +352,7 @@ body
 		line-height: 50px
 		span
 			color: $orange
+.subscribe, .post
 	.socials
 		float: none
 		margin-top: 22px
@@ -353,16 +363,28 @@ body
 			margin-right: 10px
 			background-color: #49659F
 			border-radius: 5px
+			transition: all 0.3s
+			&:hover
+				background-color: darken(#49659F,20)
+				transition: all 0.3s
 			a
-				padding: 17px 17px 17px 15px
+				padding: 18px 17px 18px 15px
 			+ li
 				background-color: #55ACEE
+				&:hover
+					background-color: darken(#55ACEE,20)
 				+ li
 					background-color: #D1221E
+					&:hover
+						background-color: darken(#D1221E,20)
 					+ li
 						background-color: #FF2D31
+						&:hover
+							background-color: darken(#FF2D31,20)
 						+ li
 							background-color: #227598
+							&:hover
+								background-color: darken(#227598,20)
 /* Mgidiply social vk/fb */
 .mgidiply-soc
 	float: right
@@ -397,6 +419,12 @@ body
 		li
 			float: left
 			margin-left: 20px
+			a
+				transition: all 0.2s
+			&.is-active, &:hover
+				a
+					color: $orange
+					transition: all 0.2s
 #menu_toggle
 	position: relative
 	display: none
@@ -404,6 +432,8 @@ body
 /*----------- Mobile Landscape Main Page ----------*/
 /*-------------------------------------------------*/
 .mobile.landscape
+	.wrap-sm
+		padding: 0 40px
 	.content
 		width: 1024px
 	.wrapper
@@ -671,6 +701,7 @@ body
 		img
 			width: 100%
 			height: auto
+			vertical-align: bottom
 /*-------------------------------------------------*/
 /*--------- Mobile Landscape Category Page --------*/
 /*-------------------------------------------------*/
@@ -690,5 +721,184 @@ body
 /*---------- Mobile Portrait Category Page --------*/
 /*-------------------------------------------------*/
 .mobile.portrait
-	.socials
+	.content
+		&__left
+			float: none
+			width: auto
+		&__right
+			display: none
+/*-------------------------------------------------*/
+/*-------------------- Post Page ------------------*/
+/*-------------------------------------------------*/
+.post
+	padding-left: 42px
+	padding-right: 42px
+	&__title
+		font-family: $mon-b
+		font-size: 42px
+		line-height: 52px
+		margin-bottom: 30px
+	&__socials
+		margin-bottom: 20px
+		+pie-clearfix
+		a
+			text-decoration: none
+		.socials
+			margin-top: 0
+			float: right
+			li
+				margin-right: 0
+				margin-left: 10px
+	&-user
+		float: left
+		+pie-clearfix
+		&__img
+			float: left
+			margin-right: 10px
+			width: 60px
+			height: 60px
+			overflow: hidden
+			border-radius: 5px
+			img
+				width: 100%
+				height: auto
+				vertical-align: bottom
+		&__text
+			float: left
+			font-size: 12px
+			color: #6E7E85
+			line-height: 15px
+			p
+				+ p
+					margin-top: 3px
+					font-family: $mon-b
+					font-size: 13px
+					line-height: 16px
+		&__buttons
+			margin-top: 5px
+			+pie-clearfix
+			a
+				float: left
+				margin-right: 10px
+				padding: 3px 10px
+				font-family: $mon-b
+				color: $grey-dark
+				text-transform: uppercase
+				background-color: #DAE9E9
+				border-radius: 5px
+				transition: all 0.3s
+				&:hover
+					background-color: darken(#DAE9E9,20)
+					transition: all 0.3s
+	&__img
+		margin-bottom: 20px
+		img
+			width: 100%
+			height: auto
+			vertical-align: bottom
+	&__text
+		margin-bottom: 20px
+		font-size: 15px
+		color: #6E7E85
+		line-height: 25px
+	.mgid-hr
+		margin-bottom: 20px
+.pagination.pagination-sm
+	.pagination__button
+		background-color: $orange
+		&:hover
+			background-color: $grey-dark
+	.pagination__next
+		float: right
+	.pagination__list
+		margin-left: 155px
+		margin-top: 10px
 		margin-right: 0
+		font-size: 32px
+		line-height: 39px
+		li
+			+ li
+				margin-left: 10px
+.post
+	&__share
+		margin: 40px auto
+		width: 370px
+		font-size: 32px
+		color: #fff
+		line-height: 39px
+		+pie-clearfix
+		li
+			float: left
+			width: 180px
+			height: 60px
+			border-radius: 5px
+			background-color: #49659F
+			transition: all 0.3s
+			&:hover
+				background-color: darken(#49659F,20)
+				transition: all 0.3s
+			+ li
+				margin-left: 10px
+				background-color: #55ACEE
+				&:hover
+					background-color: darken(#55ACEE,20)
+			a
+				display: block
+				padding-top: 8px
+				height: 100%
+				text-decoration: none
+				i
+					margin-left: 5px
+					margin-right: 15px
+.comments-fb
+	min-height: 256px
+	background-color: #F5F5F5
+.mgid-large
+	padding-top: 15px
+	border-top: 1px solid #DAE9E9
+	&__title
+		margin-bottom: 15px
+		font-family: $mon-b
+		font-size: 50px
+		line-height: 61px
+		text-align: center
+		span
+			color: $orange
+	.row
+		margin-left: -10px
+		margin-right: -10px
+	.el
+		display: inline-block
+		margin-right: -5px
+		margin-bottom: 40px
+		width: 50%
+		padding: 0 10px
+		vertical-align: top
+		&.el--small
+			.mgid-large__img
+				margin-bottom: 15px
+				height: 142px
+			.mgid-large__text
+				font-size: 15px
+				line-height: 25px
+	&__img
+		margin-bottom: 17px
+		height: 296px
+		overflow: hidden
+		img
+			width: 100%
+			height: auto
+			vertical-align: bottom
+	&__text
+		font-size: 35px
+		line-height: 45px
+/*-------------------------------------------------*/
+/*------------ Mobile Landscape Post Page ---------*/
+/*-------------------------------------------------*/
+.mobile.landscape
+	.post
+		padding-left: 40px
+		padding-right: 40px
+	.pagination.pagination-sm
+		.pagination__list
+			margin-left: 27px
