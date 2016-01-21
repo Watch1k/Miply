@@ -1,4 +1,12 @@
 head.ready(function(){
+	$('.navigation').show();
+	// mobile nav
+	$('#menu_toggle').on('click', function(){
+		$('#shadow').fadeToggle();
+		$(this).toggleClass('is-active');
+		$('.navigation').toggleClass('is-active');
+	});
+
 	var gridInterval = null;
 	var gridTime;
 	var setTime = [];
@@ -24,8 +32,13 @@ head.ready(function(){
 			}, (textTitleSpeed + titleOpacitySpeed)/2);
 		};
 		function animateEl(){
-			var numberEl = $('.grid__list li:last-child').index(),
-				randomEl = Math.floor(Math.random() * numberEl);
+			var numberEl = 0;
+			$('.grid__list li').each(function(){
+				if ($(this).is(':visible')) {
+					numberEl++;
+				}
+			});
+			var randomEl = Math.floor(Math.random() * numberEl);
 			$('.grid__list li').eq(randomEl).find('.grid__tooltip').css({top: '0'});
 			setTime[0] = setTimeout(function(){
 				$('.grid__tooltip').css({top: '100%'});

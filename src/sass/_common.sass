@@ -19,6 +19,15 @@ a
 svg
 	width: 100%
 	height: 100%
+#shadow
+	display: none
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(0,0,0,.7)
+	z-index: 999
 body
 	min-width: 320px
 	font-family: $mon-r
@@ -34,7 +43,9 @@ body
 .row
 	+pie-clearfix
 .header
+	position: relative
 	height: 80px
+	z-index: 1000
 	a
 		text-decoration: none
 .main
@@ -381,15 +392,21 @@ body
 			float: left
 			margin-left: 20px
 #menu_toggle
+	position: relative
 	display: none
 /*-------------------------------------------------*/
 /*----------- Mobile Landscape Main Page ----------*/
 /*-------------------------------------------------*/
 .mobile.landscape
+	.content
+		width: 1024px
+	.wrap-sm
+		padding: 0 40px
 	.wrapper
 		width: 1024px
 		margin-left: auto
 		margin-right: auto
+		overflow: hidden
 	#menu_toggle
 		display: block
 		float: left
@@ -410,3 +427,155 @@ body
 		&.is-active
 			i:before
 				content: unquote("\"\\#{e807}\"")
+	.navigation
+		display: none
+		position: absolute
+		top: 100%
+		left: -250px
+		width: 250px
+		margin: 0
+		z-index: 1000
+		background-color: #FFF
+		transition: all 1s
+		&.is-active
+			left: 0
+			transition: all 1s
+		li
+			display: block
+			float: none
+			padding-left: 25px
+			padding-top: 10px
+			padding-bottom: 10px
+			border-bottom: 1px solid $orange
+			+ li
+				margin-left: 0
+	.grid
+		&__list
+			li
+				width: 25%
+				&:nth-child(12) ~ li
+					display: none
+	.hot-now
+		margin-left: 20px
+		margin-right: 20px
+		.row
+			margin-left: -42px
+			margin-right: -42px
+		.el
+			margin-left: 20px
+			width: 221px
+			&__img
+				height: 123px
+	.top-trend
+		.row
+			margin-left: -20px
+		.el
+			margin-left: 20px
+			width: 461px
+			&__img
+				height: 258px
+			&.el--small
+				.el
+					width: 221px
+					&__img
+						height: 124px
+	.subscribe
+		width: 603px
+/*------------------------------------------------*/
+/*----------- Mobile Portrait Main Page ----------*/
+/*------------------------------------------------*/
+.mobile.portrait
+	.content
+		width: 768px
+	.wrap-sm
+		padding: 0 40px
+	#menu_toggle
+		display: block
+		float: left
+		margin-top: 10px
+		margin-left: 20px
+		width: 60px
+		height: 60px
+		text-align: center
+		background-color: $orange
+		border-radius: 5px
+		vertical-align: middle
+		i
+			margin-right: 5px
+			display: inline-block
+			color: #fff
+			font-size: 38px
+			line-height: 38px
+		&.is-active
+			i:before
+				content: unquote("\"\\#{e807}\"")
+	.navigation
+		display: none
+		position: absolute
+		top: 100%
+		left: -250px
+		width: 250px
+		margin: 0
+		z-index: 1000
+		font-size: 20px
+		line-height: 24px
+		background-color: #FFF
+		transition: all 1s
+		&.is-active
+			left: 0
+			transition: all 1s
+		li
+			display: block
+			float: none
+			padding-left: 25px
+			padding-top: 25px
+			padding-bottom: 25px
+			border-bottom: 1px solid $orange
+			+ li
+				margin-left: 0
+	.grid
+		&__list
+			li
+				width: 33.3%
+				&:nth-child(9) ~ li
+					display: none
+		&__title
+			&-text
+				width: 90%
+				margin-top: -60px
+	.hot-now
+		margin-left: 20px
+		margin-right: 20px
+		padding-bottom: 12px
+		.row
+			margin-left: -42px
+			margin-right: -42px
+		.el
+			margin-bottom: 20px
+			margin-left: 20px
+			width: 334px
+			&__img
+				height: 185px
+	.top-trend
+		.row
+			margin-left: -20px
+		.el
+			margin-left: 20px
+			margin-bottom: 80px
+			width: 688px
+			&__img
+				height: 385px
+			&.el--small
+				margin-bottom: 0
+				.el
+					margin-bottom: 40px
+					width: 334px
+					&__img
+						height: 187px
+	.pagination
+		margin-top: -40px
+	.subscribe
+		width: 688px
+	.mgidiply-soc
+		display: none
+	
