@@ -338,7 +338,7 @@ body {
 
 @-webkit-keyframes animatedBackground {
   from {
-    background-position: 0 center;
+    background-position: -35px center;
   }
   to {
     background-position: -100% center;
@@ -347,7 +347,7 @@ body {
 
 @-moz-keyframes animatedBackground {
   from {
-    background-position: 0 center;
+    background-position: -35px center;
   }
   to {
     background-position: -100% center;
@@ -356,7 +356,7 @@ body {
 
 @-o-keyframes animatedBackground {
   from {
-    background-position: 0 center;
+    background-position: -35px center;
   }
   to {
     background-position: -100% center;
@@ -365,7 +365,7 @@ body {
 
 @keyframes animatedBackground {
   from {
-    background-position: 0 center;
+    background-position: -35px center;
   }
   to {
     background-position: -100% center;
@@ -381,10 +381,10 @@ body {
   background-position: 0 center;
   background-repeat: repeat-x;
   z-index: 100;
-  -webkit-animation: animatedBackground 30s linear infinite;
-  -moz-animation: animatedBackground 30s linear infinite;
-  -o-animation: animatedBackground 30s linear infinite;
-  animation: animatedBackground 30s linear infinite;
+  -webkit-animation: animatedBackground 25s linear infinite;
+  -moz-animation: animatedBackground 25s linear infinite;
+  -o-animation: animatedBackground 25s linear infinite;
+  animation: animatedBackground 25s linear infinite;
 }
 
 /* hot-now section */
@@ -1125,6 +1125,9 @@ body {
 }
 .mobile.portrait .content__right {
   display: none;
+}
+.mobile.portrait .pagination.pagination-sm {
+  margin-top: 0;
 }
 
 /*------------------------------------------------- */
