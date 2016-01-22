@@ -341,7 +341,7 @@ body {
 
 @-webkit-keyframes animatedBackground {
   from {
-    background-position: -160px center;
+    background-position: 0 center;
   }
   to {
     background-position: -100% center;
@@ -350,7 +350,7 @@ body {
 
 @-moz-keyframes animatedBackground {
   from {
-    background-position: -160px center;
+    background-position: 0 center;
   }
   to {
     background-position: -100% center;
@@ -359,7 +359,7 @@ body {
 
 @-o-keyframes animatedBackground {
   from {
-    background-position: -160px center;
+    background-position: 0 center;
   }
   to {
     background-position: -100% center;
@@ -368,7 +368,7 @@ body {
 
 @keyframes animatedBackground {
   from {
-    background-position: -160px center;
+    background-position: 0 center;
   }
   to {
     background-position: -100% center;
