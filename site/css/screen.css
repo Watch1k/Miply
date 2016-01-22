@@ -424,9 +424,17 @@ body {
 }
 .hot-now .el > a {
   display: block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .hot-now .el > a:hover {
   color: #FE5F00;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .hot-now .el__img {
   overflow: hidden;
@@ -477,9 +485,17 @@ body {
 }
 .top-trend .el > a {
   display: block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .top-trend .el > a:hover {
   color: #FE5F00;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .top-trend .el__img {
   overflow: hidden;
@@ -1081,6 +1097,7 @@ body {
   font-family: "Montserrat-Bold", Arial, sans-serif;
   font-size: 20px;
   line-height: 24px;
+  text-transform: uppercase;
 }
 .aside-top ul {
   margin-top: 10px;
