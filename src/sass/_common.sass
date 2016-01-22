@@ -19,15 +19,6 @@ a
 svg
 	width: 100%
 	height: 100%
-#shadow
-	display: none
-	position: fixed
-	left: 0
-	top: 0
-	right: 0
-	bottom: 0
-	background-color: rgba(0,0,0,.7)
-	z-index: 999
 body
 	min-width: 320px
 	font-family: $mon-r
@@ -172,6 +163,8 @@ body
 			font-size: 50px
 			line-height: 1.3
 			color: #fff
+			span
+				display: block
 	&__btn-more
 		position: absolute
 		width: auto
@@ -228,6 +221,10 @@ body
 		margin-right: -5px
 		width: 25%
 		vertical-align: top
+		> a
+			display: block
+			&:hover
+				color: $orange
 		&__img
 			overflow: hidden
 			margin-bottom: 12px
@@ -266,6 +263,10 @@ body
 		margin-bottom: 40px
 		width: 50%
 		vertical-align: top
+		> a
+			display: block
+			&:hover
+				color: $orange
 		&__img
 			overflow: hidden
 			margin-bottom: 17px
@@ -475,22 +476,23 @@ body
 		display: none
 		position: absolute
 		top: 100%
-		left: -250px
-		width: 250px
+		left: 0
+		right: 0
 		margin: 0
 		z-index: 1000
-		background-color: #FFF
-		transition: all 1s
-		&.is-active
-			left: 0
-			transition: all 1s
+		font-family: $mon-b
+		font-size: 42px
+		line-height: 52px
+		text-align: center
+		background-color: #F5F5F5
+		box-shadow: 0 10px 20px #000
 		li
 			display: block
 			float: none
 			padding-left: 25px
-			padding-top: 10px
-			padding-bottom: 10px
-			border-bottom: 1px solid $orange
+			padding-top: 13px
+			padding-bottom: 14px
+			border-bottom: 1px solid #DAE9E9
 			+ li
 				margin-left: 0
 	.grid
@@ -561,24 +563,23 @@ body
 		display: none
 		position: absolute
 		top: 100%
-		left: -250px
-		width: 250px
+		left: 0
+		right: 0
 		margin: 0
 		z-index: 1000
-		font-size: 20px
-		line-height: 24px
-		background-color: #FFF
-		transition: all 1s
-		&.is-active
-			left: 0
-			transition: all 1s
+		background-color: #F5F5F5
+		font-family: $mon-b
+		font-size: 42px
+		line-height: 52px
+		text-align: center
+		box-shadow: 0 10px 20px #000
 		li
 			display: block
 			float: none
 			padding-left: 25px
-			padding-top: 25px
-			padding-bottom: 25px
-			border-bottom: 1px solid $orange
+			padding-top: 13px
+			padding-bottom: 14px
+			border-bottom: 1px solid #DAE9E9
 			+ li
 				margin-left: 0
 	.grid
@@ -589,8 +590,10 @@ body
 					display: none
 		&__title
 			&-text
-				width: 90%
+				width: 100%
 				margin-top: -80px
+				font-size: 38px
+				line-height: 50px
 	.hot-now
 		margin-left: 20px
 		margin-right: 20px
@@ -688,6 +691,8 @@ body
 	margin-bottom: 20px
 	font-size: 15px
 	line-height: 20px
+	a
+		text-decoration: none
 	&__title
 		font-family: $mon-b
 		font-size: 20px
@@ -701,6 +706,10 @@ body
 			+pie-clearfix
 			&:last-child
 				border-bottom: 1px solid #DAE9E9
+			> a
+				display: block
+				&:hover
+					color: $orange
 	&__img
 		float: left
 		margin-right: 10px
@@ -746,9 +755,9 @@ body
 	padding-right: 42px
 	&__title
 		font-family: $mon-b
-		font-size: 42px
-		line-height: 52px
-		margin-bottom: 30px
+		font-size: 48px
+		line-height: 60px
+		margin-bottom: 10px
 	&__socials
 		margin-bottom: 20px
 		+pie-clearfix
@@ -868,6 +877,8 @@ body
 	margin-top: 60px
 	padding-top: 15px
 	border-top: 1px solid #DAE9E9
+	a
+		text-decoration: none
 	&__title
 		margin-bottom: 15px
 		font-family: $mon-b
@@ -912,6 +923,17 @@ body
 	.post
 		padding-left: 40px
 		padding-right: 40px
+		&__title
+			font-size: 42px
+			line-height: 52px
 	.pagination.pagination-sm
 		.pagination__list
 			margin-left: 27px
+/*-------------------------------------------------*/
+/*------------ Mobile Portrait Post Page ----------*/
+/*-------------------------------------------------*/
+.mobile.portrait
+	.post
+		&__title
+			font-size: 42px
+			line-height: 52px

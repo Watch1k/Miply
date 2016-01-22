@@ -107,17 +107,6 @@ svg {
   height: 100%;
 }
 
-#shadow {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 999;
-}
-
 body {
   min-width: 320px;
   font-family: "Montserrat-Regular", Arial, sans-serif;
@@ -328,6 +317,9 @@ body {
   line-height: 1.3;
   color: #fff;
 }
+.grid__title-text span {
+  display: block;
+}
 .grid__btn-more {
   position: absolute;
   width: auto;
@@ -430,6 +422,12 @@ body {
   width: 25%;
   vertical-align: top;
 }
+.hot-now .el > a {
+  display: block;
+}
+.hot-now .el > a:hover {
+  color: #FE5F00;
+}
 .hot-now .el__img {
   overflow: hidden;
   margin-bottom: 12px;
@@ -476,6 +474,12 @@ body {
   margin-bottom: 40px;
   width: 50%;
   vertical-align: top;
+}
+.top-trend .el > a {
+  display: block;
+}
+.top-trend .el > a:hover {
+  color: #FE5F00;
 }
 .top-trend .el__img {
   overflow: hidden;
@@ -798,30 +802,26 @@ body {
   display: none;
   position: absolute;
   top: 100%;
-  left: -250px;
-  width: 250px;
+  left: 0;
+  right: 0;
   margin: 0;
   z-index: 1000;
-  background-color: #FFF;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-}
-.mobile.landscape .navigation.is-active {
-  left: 0;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  font-family: "Montserrat-Bold", Arial, sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+  text-align: center;
+  background-color: #F5F5F5;
+  -webkit-box-shadow: 0 10px 20px #000;
+  -moz-box-shadow: 0 10px 20px #000;
+  box-shadow: 0 10px 20px #000;
 }
 .mobile.landscape .navigation li {
   display: block;
   float: none;
   padding-left: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #FE5F00;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #DAE9E9;
 }
 .mobile.landscape .navigation li + li {
   margin-left: 0;
@@ -908,32 +908,26 @@ body {
   display: none;
   position: absolute;
   top: 100%;
-  left: -250px;
-  width: 250px;
+  left: 0;
+  right: 0;
   margin: 0;
   z-index: 1000;
-  font-size: 20px;
-  line-height: 24px;
-  background-color: #FFF;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-}
-.mobile.portrait .navigation.is-active {
-  left: 0;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  background-color: #F5F5F5;
+  font-family: "Montserrat-Bold", Arial, sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+  text-align: center;
+  -webkit-box-shadow: 0 10px 20px #000;
+  -moz-box-shadow: 0 10px 20px #000;
+  box-shadow: 0 10px 20px #000;
 }
 .mobile.portrait .navigation li {
   display: block;
   float: none;
   padding-left: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #FE5F00;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #DAE9E9;
 }
 .mobile.portrait .navigation li + li {
   margin-left: 0;
@@ -945,8 +939,10 @@ body {
   display: none;
 }
 .mobile.portrait .grid__title-text {
-  width: 90%;
+  width: 100%;
   margin-top: -80px;
+  font-size: 38px;
+  line-height: 50px;
 }
 .mobile.portrait .hot-now {
   margin-left: 20px;
@@ -1078,6 +1074,9 @@ body {
   font-size: 15px;
   line-height: 20px;
 }
+.aside-top a {
+  text-decoration: none;
+}
 .aside-top__title {
   font-family: "Montserrat-Bold", Arial, sans-serif;
   font-size: 20px;
@@ -1098,6 +1097,12 @@ body {
 }
 .aside-top ul li:last-child {
   border-bottom: 1px solid #DAE9E9;
+}
+.aside-top ul li > a {
+  display: block;
+}
+.aside-top ul li > a:hover {
+  color: #FE5F00;
 }
 .aside-top__img {
   float: left;
@@ -1151,9 +1156,9 @@ body {
 }
 .post__title {
   font-family: "Montserrat-Bold", Arial, sans-serif;
-  font-size: 42px;
-  line-height: 52px;
-  margin-bottom: 30px;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 10px;
 }
 .post__socials {
   margin-bottom: 20px;
@@ -1338,6 +1343,9 @@ body {
   padding-top: 15px;
   border-top: 1px solid #DAE9E9;
 }
+.mgid-large a {
+  text-decoration: none;
+}
 .mgid-large__title {
   margin-bottom: 15px;
   font-family: "Montserrat-Bold", Arial, sans-serif;
@@ -1391,6 +1399,18 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
+.mobile.landscape .post__title {
+  font-size: 42px;
+  line-height: 52px;
+}
 .mobile.landscape .pagination.pagination-sm .pagination__list {
   margin-left: 27px;
+}
+
+/*------------------------------------------------- */
+/*------------ Mobile Portrait Post Page ---------- */
+/*------------------------------------------------- */
+.mobile.portrait .post__title {
+  font-size: 42px;
+  line-height: 52px;
 }

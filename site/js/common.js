@@ -1,10 +1,8 @@
 head.ready(function(){
-	$('.navigation').show();
 	// mobile nav
 	$('#menu_toggle').on('click', function(){
-		$('#shadow').fadeToggle();
 		$(this).toggleClass('is-active');
-		$('.navigation').toggleClass('is-active');
+		$('.navigation').toggleClass('is-active').slideToggle();
 	});
 
 	var gridInterval = null;
