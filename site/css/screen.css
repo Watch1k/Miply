@@ -183,7 +183,7 @@ body {
 .navigation {
   float: left;
   margin-top: 31px;
-  margin-left: 125px;
+  margin-left: 112px;
   font-family: "Montserrat-Bold", Arial, sans-serif;
   font-size: 15px;
   line-height: 19px;
@@ -214,6 +214,9 @@ body {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+}
+.navigation ul li + li {
+  margin-left: 5px;
 }
 
 /* socials */
@@ -338,7 +341,7 @@ body {
 
 @-webkit-keyframes animatedBackground {
   from {
-    background-position: -35px center;
+    background-position: -160px center;
   }
   to {
     background-position: -100% center;
@@ -347,7 +350,7 @@ body {
 
 @-moz-keyframes animatedBackground {
   from {
-    background-position: -35px center;
+    background-position: -160px center;
   }
   to {
     background-position: -100% center;
@@ -356,7 +359,7 @@ body {
 
 @-o-keyframes animatedBackground {
   from {
-    background-position: -35px center;
+    background-position: -160px center;
   }
   to {
     background-position: -100% center;
@@ -365,7 +368,7 @@ body {
 
 @keyframes animatedBackground {
   from {
-    background-position: -35px center;
+    background-position: -160px center;
   }
   to {
     background-position: -100% center;
@@ -374,9 +377,9 @@ body {
 .wave {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
-  height: 21px;
+  height: 24px;
   background-image: url("../img/wave.png");
   background-position: 0 center;
   background-repeat: repeat-x;
@@ -1074,17 +1077,20 @@ body {
   font-size: 20px;
   line-height: 24px;
 }
-.aside-top li {
+.aside-top ul {
+  margin-top: 10px;
+}
+.aside-top ul li {
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 1px solid #DAE9E9;
 }
-.aside-top li:after {
+.aside-top ul li:after {
   content: "";
   display: table;
   clear: both;
 }
-.aside-top li:last-child {
+.aside-top ul li:last-child {
   border-bottom: 1px solid #DAE9E9;
 }
 .aside-top__img {

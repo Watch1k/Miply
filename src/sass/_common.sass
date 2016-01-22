@@ -72,7 +72,7 @@ body
 .navigation
 	float: left
 	margin-top: 31px
-	margin-left: 125px
+	margin-left: 112px
 	font-family: $mon-b
 	font-size: 15px
 	line-height: 19px
@@ -90,6 +90,8 @@ body
 					background-color: $orange
 					color: #fff
 					transition: all 0.2s
+			+ li
+				margin-left: 5px
 /* socials */
 .socials
 	float: right
@@ -180,15 +182,15 @@ body
 		border-radius: 5px
 @keyframes animatedBackground
 	from
-		background-position: -35px center
+		background-position: -160px center
 	to
 		background-position: -100% center
 .wave
 	position: absolute
 	left: 0
-	bottom: 0
+	bottom: -1px
 	width: 100%
-	height: 21px
+	height: 24px
 	background-image: url("../img/wave.png")
 	background-position: 0 center
 	background-repeat: repeat-x
@@ -685,13 +687,15 @@ body
 		font-family: $mon-b
 		font-size: 20px
 		line-height: 24px
-	li
-		padding-top: 20px
-		padding-bottom: 20px
-		border-top: 1px solid #DAE9E9
-		+pie-clearfix
-		&:last-child
-			border-bottom: 1px solid #DAE9E9
+	ul
+		margin-top: 10px
+		li
+			padding-top: 20px
+			padding-bottom: 20px
+			border-top: 1px solid #DAE9E9
+			+pie-clearfix
+			&:last-child
+				border-bottom: 1px solid #DAE9E9
 	&__img
 		float: left
 		margin-right: 10px
