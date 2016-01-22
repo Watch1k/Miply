@@ -161,7 +161,7 @@ gulp.task('font', function(){
 // make zip-file
 gulp.task('zip', function () {
     return gulp.src('site/**/*')
-        .pipe(zip('site.zip'))
+        .pipe(zip('Miply.zip'))
         .pipe(gulp.dest(''));
 });
 
