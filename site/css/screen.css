@@ -337,6 +337,8 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.phone .pagination { display: none; }
 .mobile.phone .mgid-hr { margin-bottom: 20px; }
 .mobile.phone .footer { min-width: 320px; }
+@media only screen and (max-width: 480px) { .mobile.phone .logo { margin-top: 6px; }
+  .mobile.phone .logo img { width: 180px; height: 24px; } }
 
 /*------------------------------------------------- */
 /*------------------ Category Page ---------------- */
