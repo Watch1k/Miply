@@ -56,7 +56,7 @@ gulp.task('sass', function() {
     ];
 
     return sass('src/sass/*.sass', {
-        style: 'expanded'
+        style: 'compact'
     })
     .on('error', function (err) {
       console.error('Error', err.message);
