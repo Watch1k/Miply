@@ -300,6 +300,7 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.phone .header .subscribe__title { text-transform: none; }
 .mobile.phone .header .subscribe .socials { display: block; }
 .mobile.phone .header .subscribe .socials li { float: left; padding: 0; border-bottom: none; }
+.mobile.phone #menu_toggle { margin-left: 20px; }
 .mobile.phone .logo { margin-left: 20px; }
 .mobile.phone .grid__list-el { height: auto; max-height: 414px; }
 .mobile.phone .grid__list-el:nth-child(9) ~ li { display: block; }
@@ -337,17 +338,19 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.phone .pagination { display: none; }
 .mobile.phone .mgid-hr { margin-bottom: 20px; }
 .mobile.phone .footer { min-width: 320px; }
-.mobile.phone .footer__logo { float: none; }
 .mobile.phone .footer__logo-link { margin-left: 10px; }
-.mobile.phone .footer__nav { margin-top: 5px; }
-@media only screen and (max-width: 480px) { .mobile.phone .logo { margin-top: 6px; }
+@media only screen and (max-width: 414px) { .mobile.phone .logo { margin-top: 6px; }
   .mobile.phone .logo img { width: 180px; height: 24px; }
-  .mobile.phone .navigation { font-size: 30px; line-height: 36px; }
-  .mobile.phone .navigation li { padding-top: 7px; padding-bottom: 8px; }
-  .mobile.phone .subscribe__title { font-size: 24px; line-height: 28px; } }
-@media only screen and (max-width: 479px) { .mobile.phone .subscribe .socials, .mobile.phone .post .socials { margin-left: -3px; }
+  .mobile.phone .navigation { font-size: 42px; line-height: 52px; }
+  .mobile.phone .subscribe__title { font-size: 32px; line-height: 42px; } }
+@media only screen and (max-width: 413px) { .mobile.phone .subscribe__title { font-size: 24px; line-height: 28px; }
+  .mobile.phone .subscribe .socials, .mobile.phone .post .socials { margin-left: -3px; }
   .mobile.phone .subscribe .socials li a, .mobile.phone .post .socials li a { padding: 12px 11px 12px 9px; } }
-@media only screen and (max-width: 320px) { .mobile.phone .subscribe .socials li a, .mobile.phone .post .socials li a { padding: 8px 7px 8px 5px; } }
+@media only screen and (max-width: 375px) { .mobile.phone .footer__logo { float: none; }
+  .mobile.phone .footer__nav { margin-top: 5px; } }
+@media only screen and (max-width: 320px) { .mobile.phone .navigation { font-size: 30px; line-height: 36px; }
+  .mobile.phone .navigation li { padding-top: 7px; padding-bottom: 8px; }
+  .mobile.phone .subscribe .socials li a, .mobile.phone .post .socials li a { padding: 8px 7px 8px 5px; } }
 
 /*------------------------------------------------ */
 /*----------- Mobile Landscape Main Page --------- */
@@ -360,8 +363,10 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.phone.landscape .hot-now .el { margin-bottom: 20px; }
 .mobile.phone.landscape .hot-now .el__img { max-height: 363px; }
 .mobile.phone.landscape .top-trend .el { width: 100%; }
+.mobile.phone.landscape .top-trend .el__img { height: auto; max-height: 715px; }
 .mobile.phone.landscape .top-trend .el.el--small { margin-bottom: 0; }
 .mobile.phone.landscape .top-trend .el.el--small .el { width: 50%; }
+.mobile.phone.landscape .top-trend .el.el--small .el__img { max-height: 347px; }
 .mobile.phone.landscape .mgidiply-soc { display: none; }
 .mobile.phone.landscape .footer__logo { float: left; }
 .mobile.phone.landscape .footer__nav { margin-top: 0; }
@@ -413,6 +418,14 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.portrait .content__left { float: none; width: auto; }
 .mobile.portrait .content__right { display: none; }
 .mobile.portrait .pagination.pagination-sm { margin-top: 0; }
+
+/*------------------------------------------------- */
+/*---------- Mobile Portrait Category Page -------- */
+/*------------------------------------------------- */
+.phone.mobile .breadcrumbs + .top-trend { margin-top: 5px; }
+.phone.mobile .content__cat { margin-bottom: 0; }
+.phone.mobile .content__left { float: none; width: auto; }
+.phone.mobile .content__right { display: none; }
 
 /*------------------------------------------------- */
 /*-------------------- Post Page ------------------ */
