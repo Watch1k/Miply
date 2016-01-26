@@ -603,7 +603,6 @@ body
 		li
 			display: block
 			float: none
-			padding-left: 25px
 			padding-top: 13px
 			padding-bottom: 14px
 			border-bottom: 1px solid #DAE9E9
@@ -687,7 +686,8 @@ body
 	.grid
 		&__list
 			&-el
-				height: 414px
+				height: auto
+				max-height: 414px
 				&:nth-child(9)
 					~ li
 						display: block
@@ -700,8 +700,8 @@ body
 			p
 				position: absolute
 				bottom: 100px
-				left: 10%
-				right: 10%
+				left: 20px
+				right: 20px
 				font-size: 22px
 				line-height: 32px
 				text-align: center
@@ -814,12 +814,76 @@ body
 		margin-bottom: 20px
 	.footer
 		min-width: 320px
+		&__logo
+			float: none
+			&-link
+				margin-left: 10px
+		&__nav
+			margin-top: 5px
 	+r(480)
 		.logo
 			margin-top: 6px
 			img
 				width: 180px
 				height: 24px
+		.navigation
+			font-size: 30px
+			line-height: 36px
+			li
+				padding-top: 7px
+				padding-bottom: 8px
+		.subscribe
+			&__title
+				font-size: 24px
+				line-height: 28px
+	+r(479)
+		.subscribe, .post
+			.socials
+				margin-left: -3px
+				li
+					a
+						padding: 12px 11px 12px 9px
+	+r(320)
+		.subscribe, .post
+			.socials
+				li
+					a
+						padding: 8px 7px 8px 5px
+/*------------------------------------------------*/
+/*----------- Mobile Landscape Main Page ---------*/
+/*------------------------------------------------*/
+.mobile.phone.landscape
+	.wrapper
+		width: auto
+	.navigation
+		font-size: 30px
+		line-height: 36px
+		li
+			padding-top: 6px
+			padding-bottom: 7px
+	.subscribe
+		text-align: center
+		.socials
+			display: inline-block
+	.hot-now
+		.el
+			margin-bottom: 20px
+			&__img
+				max-height: 363px
+	.top-trend
+		.el
+			width: 100%
+			&.el--small
+				margin-bottom: 0
+				.el
+					width: 50%
+	.mgidiply-soc
+		display: none
+	.footer
+		&__logo
+			float: left
+		&__nav
+			margin-top: 0
 /*-------------------------------------------------*/
 /*------------------ Category Page ----------------*/
 /*-------------------------------------------------*/

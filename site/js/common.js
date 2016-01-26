@@ -1,11 +1,6 @@
 head.ready(function(){
 
-	// detect mobile/tablet
-	var phoneInd = false;
-	if ((head.screen.innerWidth < 480 && head.portrait && head.mobile) || (head.screen.innerWidth < 768 && head.landscape && head.mobile)) {
-		phoneInd = true;
-		$('html').addClass('phone');
-	}
+	$('#loader').fadeOut('fast');
 
 	// mobile slider
 	if (phoneInd) {

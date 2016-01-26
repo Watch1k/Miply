@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     rigger = require('gulp-rigger'),
@@ -56,12 +57,14 @@ gulp.task('sass', function() {
     ];
 
     return sass('src/sass/*.sass', {
+        sourcemap: true,
         style: 'compact'
     })
     .on('error', function (err) {
       console.error('Error', err.message);
     })
     .pipe(postcss(processors))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('site/css/'));
 });
 
