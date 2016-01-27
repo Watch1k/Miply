@@ -9,7 +9,12 @@ head.ready(function(){
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				dots: true,
-				arrows: false
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 10000,
+				speed: 1500
 			});
 		}
 	}

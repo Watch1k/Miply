@@ -128,7 +128,7 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .grid__list-el { position: relative; overflow: hidden; float: left; width: 20%; height: 180px; cursor: pointer; }
 .grid__img img { width: 100%; height: auto; vertical-align: bottom; }
 .grid__tooltip { position: absolute; top: 100%; left: 0; width: 100%; height: 100%; font-weight: 700; font-size: 18px; color: #fff; line-height: 25px; background-color: rgba(45, 48, 71, 0.9); z-index: 1; -webkit-transition: all 0.6s; -moz-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s; }
-.grid__tooltip > a { display: block; padding: 20px; height: 100%; }
+.grid__tooltip > p { padding: 20px; height: 100%; }
 .grid__title { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(45, 48, 71, 0.9); z-index: 99; opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
 .grid__title-text { margin: 0 auto; position: relative; width: 80%; top: -40px; margin-top: -60px; text-align: center; font-weight: 700; font-size: 50px; line-height: 1.3; color: #fff; }
 .grid__title-text span { display: block; }
@@ -240,7 +240,7 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 /*------------------------------------------------- */
 .mobile.landscape .wrap-sm { padding: 0 40px; }
 .mobile.landscape .content { width: 1024px; }
-.mobile.landscape .wrapper { width: 1024px; margin-left: auto; margin-right: auto; overflow: hidden; min-width: 1024px; }
+.mobile.landscape .wrapper { margin-left: auto; margin-right: auto; overflow: hidden; min-width: 1024px; }
 .mobile.landscape .footer { min-width: 1024px; }
 .mobile.landscape #menu_toggle { display: block; float: left; margin-top: 10px; margin-left: 40px; width: 60px; height: 60px; text-align: center; background-color: #FE5F00; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; vertical-align: middle; }
 .mobile.landscape #menu_toggle i { margin-right: 5px; display: inline-block; color: #fff; font-size: 38px; line-height: 38px; }
@@ -267,7 +267,7 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.portrait .footer { min-width: 768px; }
 .mobile.portrait .content { width: 768px; }
 .mobile.portrait .wrap-sm { padding: 0 40px; }
-.mobile.portrait #menu_toggle { display: block; float: left; margin-top: 10px; margin-left: 20px; width: 60px; height: 60px; text-align: center; background-color: #FE5F00; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; vertical-align: middle; }
+.mobile.portrait #menu_toggle { display: block; float: left; margin-top: 10px; margin-left: 40px; width: 60px; height: 60px; text-align: center; background-color: #FE5F00; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; vertical-align: middle; }
 .mobile.portrait #menu_toggle i { margin-right: 5px; display: inline-block; color: #fff; font-size: 38px; line-height: 38px; }
 .mobile.portrait #menu_toggle.is-active i:before { content: "\e807"; }
 .mobile.portrait .navigation { display: none; position: absolute; top: 100%; left: 0; right: 0; margin: 0; z-index: 1000; background-color: #F5F5F5; font-weight: 700; font-size: 42px; line-height: 52px; text-align: center; -webkit-box-shadow: 0 10px 20px #000; -moz-box-shadow: 0 10px 20px #000; box-shadow: 0 10px 20px #000; }
@@ -293,20 +293,20 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 /*------------------------------------------------ */
 /*----------- Mobile Portrait Main Page ---------- */
 /*------------------------------------------------ */
-.mobile.phone .is-phone { display: block; }
 .mobile.phone .wrapper { min-width: 320px; }
 .mobile.phone .content { min-width: 320px; width: auto; }
 .mobile.phone .header .socials { display: none; }
-.mobile.phone .header .subscribe__title { text-transform: none; }
+.mobile.phone .header .subscribe__title { font-size: 32px; line-height: 42px; text-transform: none; }
 .mobile.phone .header .subscribe .socials { display: block; }
 .mobile.phone .header .subscribe .socials li { float: left; padding: 0; border-bottom: none; }
+.mobile.phone .navigation { font-size: 42px; line-height: 52px; }
 .mobile.phone #menu_toggle { margin-left: 20px; }
 .mobile.phone .logo { margin-left: 20px; }
 .mobile.phone .grid__list-el { height: auto; max-height: 414px; }
 .mobile.phone .grid__list-el:nth-child(9) ~ li { display: block; }
 .mobile.phone .grid__img { position: relative; z-index: -1; }
 .mobile.phone .grid__tooltip { top: 0; background: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 48, 71, 0)), to(#2d3047)); background: -webkit-linear-gradient(top, rgba(45, 48, 71, 0), #2d3047); background: -moz-linear-gradient(top, rgba(45, 48, 71, 0), #2d3047); background: -o-linear-gradient(top, rgba(45, 48, 71, 0), #2d3047); background: linear-gradient(to bottom, rgba(45, 48, 71, 0), #2d3047); }
-.mobile.phone .grid__tooltip p { position: absolute; bottom: 100px; left: 20px; right: 20px; font-size: 22px; line-height: 32px; text-align: center; }
+.mobile.phone .grid__tooltip p { position: absolute; height: auto; bottom: 100px; left: 20px; right: 20px; font-size: 22px; line-height: 32px; text-align: center; }
 .mobile.phone .grid__btn-more { position: absolute; bottom: 70px; left: 50%; margin-left: -39px; width: 78px; }
 .mobile.phone .grid__list .slick-dots { height: 10px; bottom: 45px; }
 .mobile.phone .grid__list .slick-dots li { padding: 0 5px; }
@@ -339,18 +339,18 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.phone .mgid-hr { margin-bottom: 20px; }
 .mobile.phone .footer { min-width: 320px; }
 .mobile.phone .footer__logo-link { margin-left: 10px; }
-@media only screen and (max-width: 414px) { .mobile.phone .logo { margin-top: 6px; }
+@media only screen and (max-width: 413px) { .mobile.phone .logo { margin-top: 6px; }
   .mobile.phone .logo img { width: 180px; height: 24px; }
-  .mobile.phone .navigation { font-size: 42px; line-height: 52px; }
-  .mobile.phone .subscribe__title { font-size: 32px; line-height: 42px; } }
-@media only screen and (max-width: 413px) { .mobile.phone .subscribe__title { font-size: 24px; line-height: 28px; }
+  .mobile.phone .subscribe__title { font-size: 24px; line-height: 28px; }
   .mobile.phone .subscribe .socials, .mobile.phone .post .socials { margin-left: -3px; }
   .mobile.phone .subscribe .socials li a, .mobile.phone .post .socials li a { padding: 12px 11px 12px 9px; } }
 @media only screen and (max-width: 375px) { .mobile.phone .footer__logo { float: none; }
-  .mobile.phone .footer__nav { margin-top: 5px; } }
+  .mobile.phone .footer__nav { margin-top: 5px; }
+  .mobile.phone .grid__list-el { max-height: 375px; } }
 @media only screen and (max-width: 320px) { .mobile.phone .navigation { font-size: 30px; line-height: 36px; }
   .mobile.phone .navigation li { padding-top: 7px; padding-bottom: 8px; }
-  .mobile.phone .subscribe .socials li a, .mobile.phone .post .socials li a { padding: 8px 7px 8px 5px; } }
+  .mobile.phone .subscribe .socials li a, .mobile.phone .post .socials li a { padding: 8px 7px 8px 5px; }
+  .mobile.phone .grid__list-el { max-height: 320px; } }
 
 /*------------------------------------------------ */
 /*----------- Mobile Landscape Main Page --------- */
@@ -420,7 +420,7 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.portrait .pagination.pagination-sm { margin-top: 0; }
 
 /*------------------------------------------------- */
-/*---------- Mobile Portrait Category Page -------- */
+/*--------------- Mobile Category Page ------------ */
 /*------------------------------------------------- */
 .phone.mobile .breadcrumbs + .top-trend { margin-top: 5px; }
 .phone.mobile .content__cat { margin-bottom: 0; }
@@ -475,9 +475,9 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mgid-large__title span { color: #FE5F00; }
 .mgid-large .row { margin-left: -10px; margin-right: -10px; }
 .mgid-large .el { display: inline-block; margin-right: -5px; margin-bottom: 40px; width: 50%; padding: 0 10px; vertical-align: top; }
-.mgid-large .el.el--small .mgid-large__img { margin-bottom: 15px; height: 142px; }
+.mgid-large .el.el--small .mgid-large__img { margin-bottom: 15px; max-height: 142px; }
 .mgid-large .el.el--small .mgid-large__text { font-size: 15px; line-height: 25px; }
-.mgid-large__img { margin-bottom: 17px; height: 296px; overflow: hidden; }
+.mgid-large__img { margin-bottom: 17px; max-height: 296px; overflow: hidden; }
 .mgid-large__img img { width: 100%; height: auto; vertical-align: bottom; }
 .mgid-large__text { font-size: 35px; line-height: 45px; }
 
@@ -492,6 +492,39 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 /*------------ Tablet Portrait Post Page ---------- */
 /*------------------------------------------------- */
 .mobile.portrait .post__title { font-size: 42px; line-height: 52px; }
+
+/*------------------------------------------------- */
+/*----------------- Mobile Post Page -------------- */
+/*------------------------------------------------- */
+.mobile.phone .breadcrumbs { display: none; }
+.mobile.phone .post { padding-left: 20px; padding-right: 20px; }
+.mobile.phone .post__title { margin-top: -10px; font-size: 28px; line-height: 36px; }
+.mobile.phone .post__socials { display: none; }
+.mobile.phone .post__img { margin-bottom: 10px; }
+.mobile.phone .post .mgid-hr { margin-bottom: 10px; }
+.mobile.phone .pagination.is-phone .pagination__prev { overflow: hidden; width: 60px; }
+.mobile.phone .pagination.is-phone .pagination__prev i { margin-bottom: 50px; }
+.mobile.phone .pagination.is-phone .pagination__list { margin-top: 15px; margin-left: 35px; font-size: 24px; line-height: 29px; }
+@media only screen and (max-width: 413px) { .mobile.phone .pagination.is-phone .pagination__list { margin-left: 70px; } }
+@media only screen and (max-width: 320px) { .mobile.phone .pagination.is-phone .pagination__list { margin-left: 40px; } }
+@media only screen and (max-width: 413px) { .mobile.phone .pagination.is-phone .pagination__next { overflow: hidden; width: 60px; }
+  .mobile.phone .pagination.is-phone .pagination__next i { margin-bottom: 50px; } }
+.mobile.phone .post__share { display: none; }
+.mobile.phone .subscribe.is-phone { float: none; padding-top: 0; text-align: center; background-color: transparent; }
+.mobile.phone .subscribe.is-phone .socials { display: inline-block; }
+.mobile.phone .mgid-large { margin-top: 40px; }
+.mobile.phone .mgid-large__title { font-size: 32px; line-height: 39px; }
+.mobile.phone .mgid-large__text { font-size: 27px; line-height: 38px; }
+.mobile.phone .mgid-large__img { margin-bottom: 10px; }
+.mobile.phone .mgid-large .el { margin-bottom: 20px; width: 100%; }
+.mobile.phone .mgid-large .el.el--small { margin-bottom: 0; }
+.mobile.phone .mgid-large .el.el--small .el .mgid-large__img { max-height: 296px; }
+.mobile.phone .mgid-large .el.el--small .el .mgid-large__text { font-size: 27px; line-height: 38px; }
+
+/*------------------------------------------------- */
+/*----------------- Other styles ------------------ */
+/*------------------------------------------------- */
+.mobile.phone .is-phone { display: block; }
 
 
 

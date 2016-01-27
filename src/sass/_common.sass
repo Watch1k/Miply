@@ -161,8 +161,7 @@ body
 		background-color: rgba(45,48,71,.9)
 		z-index: 1
 		transition: all 0.6s
-		> a
-			display: block
+		> p
 			padding: 20px
 			height: 100%
 	&__title
@@ -472,7 +471,6 @@ body
 	.content
 		width: 1024px
 	.wrapper
-		width: 1024px
 		margin-left: auto
 		margin-right: auto
 		overflow: hidden
@@ -570,7 +568,7 @@ body
 		display: block
 		float: left
 		margin-top: 10px
-		margin-left: 20px
+		margin-left: 40px
 		width: 60px
 		height: 60px
 		text-align: center
@@ -662,8 +660,6 @@ body
 /*----------- Mobile Portrait Main Page ----------*/
 /*------------------------------------------------*/
 .mobile.phone
-	.is-phone
-		display: block
 	.wrapper
 		min-width: 320px
 	.content
@@ -674,6 +670,8 @@ body
 			display: none
 		.subscribe
 			&__title
+				font-size: 32px
+				line-height: 42px
 				text-transform: none
 			.socials
 				display: block
@@ -681,6 +679,9 @@ body
 					float: left
 					padding: 0
 					border-bottom: none
+	.navigation
+		font-size: 42px
+		line-height: 52px
 	#menu_toggle
 		margin-left: 20px
 	.logo
@@ -701,6 +702,7 @@ body
 			background: linear-gradient(to bottom, rgba(45, 48, 71, 0), rgba(45, 48, 71, 1))
 			p
 				position: absolute
+				height: auto
 				bottom: 100px
 				left: 20px
 				right: 20px
@@ -819,20 +821,12 @@ body
 		&__logo
 			&-link
 				margin-left: 10px
-	+r(414)
+	+r(413)
 		.logo
 			margin-top: 6px
 			img
 				width: 180px
 				height: 24px
-		.navigation
-			font-size: 42px
-			line-height: 52px
-		.subscribe
-			&__title
-				font-size: 32px
-				line-height: 42px
-	+r(413)
 		.subscribe
 			&__title
 				font-size: 24px
@@ -848,6 +842,8 @@ body
 			float: none
 		.footer__nav
 			margin-top: 5px
+		.grid__list-el
+			max-height: 375px
 	+r(320)
 		.navigation
 			font-size: 30px
@@ -860,6 +856,8 @@ body
 				li
 					a
 						padding: 8px 7px 8px 5px
+		.grid__list-el
+			max-height: 320px
 /*------------------------------------------------*/
 /*----------- Mobile Landscape Main Page ---------*/
 /*------------------------------------------------*/
@@ -1017,7 +1015,7 @@ body
 	.pagination.pagination-sm
 		margin-top: 0
 /*-------------------------------------------------*/
-/*---------- Mobile Portrait Category Page --------*/
+/*--------------- Mobile Category Page ------------*/
 /*-------------------------------------------------*/
 .phone.mobile
 	.breadcrumbs
@@ -1185,13 +1183,13 @@ body
 		&.el--small
 			.mgid-large__img
 				margin-bottom: 15px
-				height: 142px
+				max-height: 142px
 			.mgid-large__text
 				font-size: 15px
 				line-height: 25px
 	&__img
 		margin-bottom: 17px
-		height: 296px
+		max-height: 296px
 		overflow: hidden
 		img
 			width: 100%
@@ -1221,3 +1219,79 @@ body
 		&__title
 			font-size: 42px
 			line-height: 52px
+/*-------------------------------------------------*/
+/*----------------- Mobile Post Page --------------*/
+/*-------------------------------------------------*/
+.mobile.phone
+	.breadcrumbs
+		display: none
+	.post
+		padding-left: 20px
+		padding-right: 20px
+		&__title
+			margin-top: -10px
+			font-size: 28px
+			line-height: 36px
+		&__socials
+			display: none
+		&__img
+			margin-bottom: 10px
+		.mgid-hr
+			margin-bottom: 10px
+	.pagination.is-phone
+		.pagination__prev
+			overflow: hidden
+			width: 60px
+			i
+				margin-bottom: 50px
+		.pagination__list
+			margin-top: 15px
+			margin-left: 35px
+			font-size: 24px
+			line-height: 29px
+			+r(413)
+				margin-left: 70px
+			+r(320)
+				margin-left: 40px
+		+r(413)
+			.pagination__next
+				overflow: hidden
+				width: 60px
+				i
+					margin-bottom: 50px
+	.post__share
+		display: none
+	.subscribe.is-phone
+		float: none
+		padding-top: 0
+		text-align: center
+		background-color: transparent
+		.socials
+			display: inline-block
+	.mgid-large
+		margin-top: 40px
+		&__title
+			font-size: 32px
+			line-height: 39px
+		&__text
+			font-size: 27px
+			line-height: 38px
+		&__img
+			margin-bottom: 10px
+		.el
+			margin-bottom: 20px
+			width: 100%
+			&.el--small
+				margin-bottom: 0
+				.el
+					.mgid-large__img
+						max-height: 296px
+					.mgid-large__text
+						font-size: 27px
+						line-height: 38px
+/*-------------------------------------------------*/
+/*----------------- Other styles ------------------*/
+/*-------------------------------------------------*/
+.mobile.phone
+	.is-phone
+		display: block
