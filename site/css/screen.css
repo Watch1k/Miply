@@ -496,19 +496,19 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 /*------------------------------------------------- */
 /*----------------- Mobile Post Page -------------- */
 /*------------------------------------------------- */
-.mobile.phone .breadcrumbs { display: none; }
 .mobile.phone .post { padding-left: 20px; padding-right: 20px; }
 .mobile.phone .post__title { margin-top: -10px; font-size: 28px; line-height: 36px; }
 .mobile.phone .post__socials { display: none; }
 .mobile.phone .post__img { margin-bottom: 10px; }
 .mobile.phone .post .mgid-hr { margin-bottom: 10px; }
-.mobile.phone .pagination.is-phone .pagination__prev { overflow: hidden; width: 60px; }
-.mobile.phone .pagination.is-phone .pagination__prev i { margin-bottom: 50px; }
-.mobile.phone .pagination.is-phone .pagination__list { margin-top: 15px; margin-left: 35px; font-size: 24px; line-height: 29px; }
-@media only screen and (max-width: 413px) { .mobile.phone .pagination.is-phone .pagination__list { margin-left: 70px; } }
-@media only screen and (max-width: 320px) { .mobile.phone .pagination.is-phone .pagination__list { margin-left: 40px; } }
-@media only screen and (max-width: 413px) { .mobile.phone .pagination.is-phone .pagination__next { overflow: hidden; width: 60px; }
-  .mobile.phone .pagination.is-phone .pagination__next i { margin-bottom: 50px; } }
+.mobile.phone .pagination.pagination-sm { display: block; }
+.mobile.phone .pagination.pagination-sm .pagination__prev { overflow: hidden; width: 60px; }
+.mobile.phone .pagination.pagination-sm .pagination__prev i { margin-bottom: 50px; }
+.mobile.phone .pagination.pagination-sm .pagination__list { margin-top: 15px; margin-left: 35px; font-size: 24px; line-height: 29px; }
+@media only screen and (max-width: 413px) { .mobile.phone .pagination.pagination-sm .pagination__list { margin-left: 70px; } }
+@media only screen and (max-width: 320px) { .mobile.phone .pagination.pagination-sm .pagination__list { margin-left: 40px; } }
+@media only screen and (max-width: 413px) { .mobile.phone .pagination.pagination-sm .pagination__next { overflow: hidden; width: 60px; }
+  .mobile.phone .pagination.pagination-sm .pagination__next i { margin-bottom: 50px; } }
 .mobile.phone .post__share { display: none; }
 .mobile.phone .subscribe.is-phone { float: none; padding-top: 0; text-align: center; background-color: transparent; }
 .mobile.phone .subscribe.is-phone .socials { display: inline-block; }
@@ -525,6 +525,7 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 /*----------------- Other styles ------------------ */
 /*------------------------------------------------- */
 .mobile.phone .is-phone { display: block; }
+.mobile.phone .no-phone { display: none; }
 
 
 

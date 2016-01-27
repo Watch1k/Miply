@@ -1223,8 +1223,6 @@ body
 /*----------------- Mobile Post Page --------------*/
 /*-------------------------------------------------*/
 .mobile.phone
-	.breadcrumbs
-		display: none
 	.post
 		padding-left: 20px
 		padding-right: 20px
@@ -1238,7 +1236,8 @@ body
 			margin-bottom: 10px
 		.mgid-hr
 			margin-bottom: 10px
-	.pagination.is-phone
+	.pagination.pagination-sm
+		display: block
 		.pagination__prev
 			overflow: hidden
 			width: 60px
@@ -1295,3 +1294,5 @@ body
 .mobile.phone
 	.is-phone
 		display: block
+	.no-phone
+		display: none
