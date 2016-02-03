@@ -29,6 +29,29 @@ body
 .content
 	margin: 0 auto
 	width: 1152px
+	+pie-clearfix
+	&-left
+		display: none
+		width: 277px
+		float: left
+		a
+			text-decoration: none
+		.el
+			margin-bottom: 20px
+			padding-left: 40px
+			font-size: 15px
+			line-height: 25px
+			&__img
+				margin-bottom: 12px
+				overflow: hidden
+				height: 133px
+				img
+					width: 100%
+					height: auto
+					vertical-align: bottom
+	&-right
+		max-width: 1152px
+		float: none
 .row
 	+pie-clearfix
 .header
@@ -243,6 +266,8 @@ body
 		margin-right: -5px
 		width: 25%
 		vertical-align: top
+		&:nth-child(4) ~ .el
+			display: none
 		> a
 			display: block
 			transition: all 0.2s
@@ -1288,6 +1313,21 @@ body
 					.mgid-large__text
 						font-size: 27px
 						line-height: 38px
+/*-------------------------------------------------*/
+/*-------------------- QHD Display ----------------*/
+/*-------------------------------------------------*/
+@media only screen and (min-width: 1600px)
+	.content
+		width: 1429px
+		&-left
+			display: block
+		&-right
+			float: left
+	.hot-now
+		.el
+			width: 20%
+			&:nth-child(4) ~ .el
+				display: inline-block
 /*-------------------------------------------------*/
 /*----------------- Other styles ------------------*/
 /*-------------------------------------------------*/

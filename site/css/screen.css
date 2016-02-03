@@ -80,6 +80,13 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .wrapper { min-height: 100%; padding-bottom: 85px; min-width: 1152px; }
 
 .content { margin: 0 auto; width: 1152px; }
+.content:after { content: ""; display: table; clear: both; }
+.content-left { display: none; width: 277px; float: left; }
+.content-left a { text-decoration: none; }
+.content-left .el { margin-bottom: 20px; padding-left: 40px; font-size: 15px; line-height: 25px; }
+.content-left .el__img { margin-bottom: 12px; overflow: hidden; height: 133px; }
+.content-left .el__img img { width: 100%; height: auto; vertical-align: bottom; }
+.content-right { max-width: 1152px; float: none; }
 
 .row:after { content: ""; display: table; clear: both; }
 
@@ -153,6 +160,7 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .hot-now .section__title { margin-bottom: 20px; font-weight: 700; font-size: 20px; color: #FE5F00; line-height: 24px; text-transform: uppercase; }
 .hot-now .row { margin-left: -20px; margin-right: -20px; }
 .hot-now .el { display: inline-block; padding-left: 20px; padding-right: 20px; margin-right: -5px; width: 25%; vertical-align: top; }
+.hot-now .el:nth-child(4) ~ .el { display: none; }
 .hot-now .el > a { display: block; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
 .hot-now .el > a:hover { color: #FE5F00; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
 .hot-now .el__img { overflow: hidden; margin-bottom: 12px; height: 133px; }
@@ -521,6 +529,14 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .mobile.phone .mgid-large .el.el--small .el .mgid-large__img { max-height: 296px; }
 .mobile.phone .mgid-large .el.el--small .el .mgid-large__text { font-size: 27px; line-height: 38px; }
 
+/*------------------------------------------------- */
+/*-------------------- QHD Display ---------------- */
+/*------------------------------------------------- */
+@media only screen and (min-width: 1600px) { .content { width: 1429px; }
+  .content-left { display: block; }
+  .content-right { float: left; }
+  .hot-now .el { width: 20%; }
+  .hot-now .el:nth-child(4) ~ .el { display: inline-block; } }
 /*------------------------------------------------- */
 /*----------------- Other styles ------------------ */
 /*------------------------------------------------- */
