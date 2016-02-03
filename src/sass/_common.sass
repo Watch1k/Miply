@@ -30,15 +30,25 @@ body
 	margin: 0 auto
 	width: 1152px
 	+pie-clearfix
-	&-left
+	&-right
+		position: relative
 		display: none
+		padding-top: 75px
 		width: 277px
 		float: left
+		&:after
+			content: ''
+			position: absolute
+			top: 34px
+			left: -42px
+			right: 40px
+			height: 1px
+			background-color: #DAE9E9
 		a
 			text-decoration: none
 		.el
 			margin-bottom: 20px
-			padding-left: 40px
+			padding-right: 40px
 			font-size: 15px
 			line-height: 25px
 			&__img
@@ -49,7 +59,7 @@ body
 					width: 100%
 					height: auto
 					vertical-align: bottom
-	&-right
+	&-left
 		max-width: 1152px
 		float: none
 .row
@@ -1319,9 +1329,9 @@ body
 @media only screen and (min-width: 1600px)
 	.content
 		width: 1429px
-		&-left
-			display: block
 		&-right
+			display: block
+		&-left
 			float: left
 	.hot-now
 		.el

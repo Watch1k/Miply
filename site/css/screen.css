@@ -81,12 +81,13 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 
 .content { margin: 0 auto; width: 1152px; }
 .content:after { content: ""; display: table; clear: both; }
-.content-left { display: none; width: 277px; float: left; }
-.content-left a { text-decoration: none; }
-.content-left .el { margin-bottom: 20px; padding-left: 40px; font-size: 15px; line-height: 25px; }
-.content-left .el__img { margin-bottom: 12px; overflow: hidden; height: 133px; }
-.content-left .el__img img { width: 100%; height: auto; vertical-align: bottom; }
-.content-right { max-width: 1152px; float: none; }
+.content-right { position: relative; display: none; padding-top: 75px; width: 277px; float: left; }
+.content-right:after { content: ""; position: absolute; top: 34px; left: -42px; right: 40px; height: 1px; background-color: #DAE9E9; }
+.content-right a { text-decoration: none; }
+.content-right .el { margin-bottom: 20px; padding-right: 40px; font-size: 15px; line-height: 25px; }
+.content-right .el__img { margin-bottom: 12px; overflow: hidden; height: 133px; }
+.content-right .el__img img { width: 100%; height: auto; vertical-align: bottom; }
+.content-left { max-width: 1152px; float: none; }
 
 .row:after { content: ""; display: table; clear: both; }
 
@@ -533,8 +534,8 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 /*-------------------- QHD Display ---------------- */
 /*------------------------------------------------- */
 @media only screen and (min-width: 1600px) { .content { width: 1429px; }
-  .content-left { display: block; }
-  .content-right { float: left; }
+  .content-right { display: block; }
+  .content-left { float: left; }
   .hot-now .el { width: 20%; }
   .hot-now .el:nth-child(4) ~ .el { display: inline-block; } }
 /*------------------------------------------------- */
