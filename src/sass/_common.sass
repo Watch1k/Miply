@@ -36,14 +36,6 @@ body
 		padding-top: 75px
 		width: 277px
 		float: left
-		&:after
-			content: ''
-			position: absolute
-			top: 34px
-			left: -42px
-			right: 40px
-			height: 1px
-			background-color: #DAE9E9
 		a
 			text-decoration: none
 		.el
@@ -1333,6 +1325,17 @@ body
 			display: block
 		&-left
 			float: left
+	.top-trend
+		.section__title
+			position: relative
+			padding-bottom: 10px
+			&:after
+				position: absolute
+				content: ''
+				bottom: 0
+				left: 0
+				right: -280px
+				background-color: #DAE9E9
 	.hot-now
 		.el
 			width: 20%

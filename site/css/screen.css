@@ -82,7 +82,6 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .content { margin: 0 auto; width: 1152px; }
 .content:after { content: ""; display: table; clear: both; }
 .content-right { position: relative; display: none; padding-top: 75px; width: 277px; float: left; }
-.content-right:after { content: ""; position: absolute; top: 34px; left: -42px; right: 40px; height: 1px; background-color: #DAE9E9; }
 .content-right a { text-decoration: none; }
 .content-right .el { margin-bottom: 20px; padding-right: 40px; font-size: 15px; line-height: 25px; }
 .content-right .el__img { margin-bottom: 12px; overflow: hidden; height: 133px; }
@@ -536,6 +535,8 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 @media only screen and (min-width: 1600px) { .content { width: 1429px; }
   .content-right { display: block; }
   .content-left { float: left; }
+  .top-trend .section__title { position: relative; padding-bottom: 10px; }
+  .top-trend .section__title:after { position: absolute; content: ""; bottom: 0; left: 0; right: -280px; background-color: #DAE9E9; }
   .hot-now .el { width: 20%; }
   .hot-now .el:nth-child(4) ~ .el { display: inline-block; } }
 /*------------------------------------------------- */
